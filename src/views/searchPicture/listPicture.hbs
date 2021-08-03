@@ -1,0 +1,36 @@
+<form action="/searchPicture/searching" method="POST">
+    <div class="p-4">
+        <input name="title" type="text" class="form-control" placeholder="Buscar pelicula, documental o serie" autofocus
+            required>
+    </div>
+</form>
+{{#if buscaPeli}}
+<table align="center">
+    <thead>
+        <tr>
+            {{#each buscaPeli}}
+            <th>
+                <div align="center" class="card" style="width:18rem;height:50rem;">
+                    <img src="../photo/{{ nombrePortada }}.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ tituloPelicula }}</h5>
+                        <h6 class="small">Genero: <strong> {{ categoria }}</strong></h6>
+                        <h6 class="card-text" align="justify" style="font-size:10px">{{ descPelicula }}</h6>
+                    </div>
+                    <div class="card-footer">
+                        <div class='btn-group text-center' role='group' aria-label='Basic example'>
+                            <a class='btn btn-dark btn-sm' href='#' align='right'><i class="fas fa-play-circle"></i>
+                                Reproducir</a>
+                            <a class='btn btn-success btn-sm' href='#' align='right'><i class="far fa-heart"></i>
+                                Guardar favorito</a>
+                        </div>
+                    </div>
+                </div>
+            </th>
+            {{/each}}
+        </tr>
+    </thead>
+</table>
+{{else}}
+<div align="center"><img src="../img/search.png" width="500" height="600" alt=""></div>
+{{/if}}

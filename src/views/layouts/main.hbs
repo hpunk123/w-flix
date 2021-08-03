@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisflix</title>
+    {{! -- BOOTSTRAP 5 --}}
+    <link href="/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    {{! -- FONTAWESOME --}}
+    <script src="/fontawesome/fontawesome1/js/all.js" crossorigin="anonymous"></script>
+    {{! -- ESTILOS --}}
+    <link rel="stylesheet" href="/css/sidemenu.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/ckeditor/ckeditor.js"></script>
+    
+</head>
+
+<body>
+    {{> sidebar }}
+    {{> navegacion }}
+    {{> mensajes }}
+    {{{ body }}}
+    {{!-- SCRIPTS --}}    
+    <script src="/bootstrap/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/css/export.js"></script>
+</body>
+
+</html>

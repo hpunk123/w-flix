@@ -1,0 +1,80 @@
+<div id="sidemenu" class="menu-collapsed">
+  <!-- HEADER !-->
+  <div id="header">
+    <div id="title"><a href="/"><span><strong>Wisflix</strong></span></a></div>
+    <div id="menu-btn">
+      <div class="btn-hamburger"></div>
+      <div class="btn-hamburger"></div>
+      <div class="btn-hamburger"></div>
+    </div>
+  </div>
+  <!-- PERFIL !-->
+  {{#if user }}
+  <div id="profile">
+    <a href="/">
+      <div id="photo"><img src="../photo/dev.png" alt=""></div>
+      <div id="name"><span>{{user.nombre}}</span></div>
+    </a>
+  </div>
+  <!-- ITEMS !-->
+  <div id="menu-items">
+    <div class="item">
+      <a href="/profile">
+        <div class="icon"><i class="fas fa-user-alt"></i></div>
+        <div class="title"><span>Perfil</span></div>
+      </a>
+    </div>
+    <div class="item">
+      <a href="/searchPicture">
+        <div class="icon"><i class="fas fa-search"></i></div>
+        <div class="title"><span>Buscar</span></div>
+      </a>
+    </div>
+    <div class="item">
+      <a href="/favorites">
+        <div class="icon"><i class="fas fa-heart"></i></div>
+        <div class="title"><span>Favoritos</span></div>
+      </a>
+    </div>
+    <div class="item">
+      <a href="/titles">
+        <div class="icon"><i class="fas fa-folder-plus"></i></div>
+        <div class="title"><span>Agregar Titulos</span></div>
+      </a>
+    </div>
+    <div class="item">
+      <a href="/poster">
+        <div class="icon"><i class="fas fa-images"></i></i></div>
+        <div class="title"><span>Agregar Portadas</span></div>
+      </a>
+    </div>
+    <div class="item">
+      <a href="/logout">
+        <div class="icon"><i class="fas fa-sign-out-alt"></i></div>
+        <div class="title"><span>Cerrar Sesión</span></div>
+      </a>
+    </div>
+  </div>
+</div>
+{{else}}
+<!-- ITEMS !-->
+<div id="menu-items">
+  <div class="item separator"></div>
+  <div class="item">
+    <a href="/signin">
+      <div class="icon"><i class="fas fa-sign-in-alt"></i></div>
+      <div class="title"><span>Iniciar Sesión</span></div>
+    </a>
+  </div>
+</div>
+</div>
+{{/if}}
+<script>
+  const btn = document.querySelector('#menu-btn');
+  const menu = document.querySelector('#sidemenu');
+  btn.addEventListener('click', e => {
+    menu.classList.toggle("menu-expanded");
+    menu.classList.toggle("menu-collapsed");
+    document.querySelector('body').classList.toggle('body-expanded');
+  })
+</script>

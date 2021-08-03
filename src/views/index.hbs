@@ -1,0 +1,11 @@
+<main class="index">
+    <header class="masthead">
+        <div class="container text-center my-auto">            
+            {{#if user}}
+            <a  href="/profile" class="btn btn-lg btn-danger" style="position: absolute;top: 70%;"><i class="fas fa-play-circle"></i> Wisflix</a>
+            {{else}}
+            <a href="/signin" class="btn btn-lg btn-dark"><i class="fas fa-sign-in-alt"></i> Ingresa a Wisflix</a>
+        </div>
+            {{/if}}
+    </header>
+</main>

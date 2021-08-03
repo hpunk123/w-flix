@@ -1,0 +1,43 @@
+<form action="/titles/loadMovie" method="POST">
+<div class="container p-4">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h6><i class="fas fa-film"></i> Cargar Pelicula</h6>
+            </div>
+            <div class="card-body">
+                <div>
+                    <input name="tituloPelicula" type="text" class="form-control mb-2" placeholder="Titulo de la Pelicula" autofocus required selected>
+                </div>
+                <div>
+                    <textarea name="descPelicula" class="form-control mb-2" placeholder="Agrega Sinopsis" id="" cols="30" rows="10" required></textarea>                    
+                </div>
+                <div>
+                    <select name="idCategoriafk" id="" class="form-control mb-2">
+                        <option value="">Selecciona Categoria</option>
+                        {{#if category}}
+                        {{#each category}}
+                        <option value="{{ idCategoria }}">{{ categoria }}</option>
+                        {{/each}}
+                        {{/if}}
+                    </select>
+                </div>
+                <div>
+                    <select name="fkPortada" id="" class="form-control mb-2">
+                      <option value="">Selecciona Portada</option>
+                      {{#if poster}}
+                      {{#each poster}}
+                      <option value="{{ idPortada }}">{{ nombrePortada }}</option>
+                      {{/each}}
+                      {{/if}}
+                    </select>
+                </div>
+                <div>
+                    <button class="btn btn-success btn-sm"><i class="fas fa-tape"></i> Cargar Pelicula</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</form>

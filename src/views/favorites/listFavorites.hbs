@@ -1,0 +1,35 @@
+{{#if favorites }}
+<table align="center">
+    <thead>
+        <tr>
+            {{#each favorites}}
+            <th>
+                <div class="p-4">
+                    <div class="container">
+                        <div class="col-md-15 mx-auto">
+                            <div class="card" style="width:18rem;height:50rem;">
+                                <img src="photo/{{ nombrePortada }}.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ tituloPelicula }}</h5>
+                                    <h6 class="small">Genero: <strong> {{ categoria }}</strong></h6>
+                                    <h6 class="card-text small" align="justify" style="font-size:10px">{{ sinopsis }}
+                                    </h6>
+                                </div>
+                                <div class="card-footer">
+                                    <div class='btn-group text-center' role='group' aria-label='Basic example'>
+                                        <a class='btn btn-dark btn-sm' href='#' align='right'><i
+                                                class="fas fa-play-circle"></i>
+                                            Reproducir</a>
+                                        <a class='btn btn-danger btn-sm' href='#' align='right'><i
+                                                class="far fa-heart"></i> Ya no es favorito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+        </tr>
+    </thead>
+</table>
+{{/if}}
